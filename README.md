@@ -274,7 +274,7 @@ Future versions of DayBloom may include:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="<p align="center">
+  
   <img src="DayBloom_Windows_Portable/assets/Dashboard1.png" alt="DayBloom Dashboard" width="850">
 </p>
   <img src="DayBloom_Windows_Portable/assets/calender.png" width="400">
