@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DayBloom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✿</div>
+      <div>
+        <div class="brand-name">DayBloom</div>
+        <div class="brand-sub">Plan your day beautifully</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" id="todayBtn" title="Go to today">Today</button>
+      <button class="icon-btn" id="themeQuick" title="Change theme">🎨</button>
+      <button class="icon-btn" id="minBtn">—</button>
+      <button class="icon-btn" id="maxBtn">□</button>
+      <button class="icon-btn close" id="closeBtn">×</button>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="sidebar">
+      <button class="nav active" data-view="home">⌂ <span>Home</span></button>
+      <button class="nav" data-view="calendar">▣ <span>Calendar</span></button>
+      <button class="nav" data-view="tasks">✓ <span>Tasks</span></button>
+      <button class="nav" data-view="notes">▤ <span>Sticky Notes</span></button>
+      <button class="nav" data-view="settings">⚙ <span>Settings</span></button>
+      <div class="sidebar-bottom">
+        <div class="mini-tip">🌷<br><small>Make today<br>feel lighter.</small></div>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section id="homeView" class="view active-view">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow" id="homeDate"></div>
+            <h1>Good day, <span>planner.</span> ♡</h1>
+            <p class="muted">Here is your little space for today.</p>
+          </div>
+          <button class="primary" id="quickAdd">＋ Add task</button>
+        </div>
+
+        <div class="grid">
+          <div class="card calendar-card">
+            <div class="card-head">
+              <div><h2>📅 Calendar</h2><span class="muted">Pick a date to plan it</span></div>
+              <div class="month-controls">
+                <button class="round-btn" id="prevMonth">‹</button>
+                <strong id="monthTitle"></strong>
+                <button class="round-btn" id="nextMonth">›</button>
+              </div>
+            </div>
+            <div id="calendar"></div>
+          </div>
+
+          <div class="card tasks-card">
+            <div class="card-head">
+              <div><h2>📝 Today's plan</h2><span class="muted" id="taskCount"></span></div>
+              <button class="text-btn" id="openTasks">View all</button>
+            </div>
+            <div id="todayTasks" class="task-list"></div>
+            <div class="progress"><div id="progressBar"></div></div>
+            <div class="progress-label" id="progressText"></div>
+          </div>
+
+          <div class="card notes-card">
+            <div class="card-head">
+              <div><h2>🗒️ Sticky notes</h2><span class="muted">Little reminders</span></div>
+              <button class="text-btn" id="newNote">＋ Note</button>
+            </div>
+            <div id="notePreview" class="note-preview"></div>
+          </div>
+
+          <div class="card reminder-card">
+            <div class="card-head"><div><h2>🔔 Next reminder</h2><span class="muted">Don't miss the important bits</span></div></div>
+            <div id="nextReminder" class="next-reminder"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="calendarView" class="view">
+        <div class="page-head"><div><h1>Calendar</h1><p class="muted">Choose a date and create a plan.</p></div><button class="primary" id="calendarAdd">＋ Plan this date</button></div>
+        <div class="card big-calendar"><div id="calendarLarge"></div></div>
+      </section>
+
+      <section id="tasksView" class="view">
+        <div class="page-head"><div><h1>Tasks</h1><p class="muted">Everything you want to get done.</p></div><button class="primary" id="taskAdd">＋ New task</button></div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="today">Today</button>
+          <button class="filter" data-filter="open">Open</button>
+          <button class="filter" data-filter="done">Completed</button>
+        </div>
+        <div class="card"><div id="allTasks" class="task-list large"></div></div>
+      </section>
+
+      <section id="notesView" class="view">
+        <div class="page-head"><div><h1>Sticky Notes</h1><p class="muted">Make your own colorful little notes.</p></div><button class="primary" id="noteAdd">＋ New note</button></div>
+        <div id="notesGrid" class="notes-grid"></div>
+      </section>
+
+      <section id="settingsView" class="view">
+        <div class="page-head"><div><h1>Customize</h1><p class="muted">Make DayBloom feel like yours.</p></div></div>
+        <div class="settings-grid">
+          <div class="card setting-card">
+            <h2>🎨 Themes</h2>
+            <p class="muted">Choose a soft preset.</p>
+            <div class="theme-grid">
+              <button class="theme-choice" data-theme="sakura">🌸 Sakura</button>
+              <button class="theme-choice" data-theme="lavender">💜 Lavender</button>
+              <button class="theme-choice" data-theme="mint">🌿 Mint</button>
+              <button class="theme-choice" data-theme="peach">🍑 Peach</button>
+              <button class="theme-choice" data-theme="sky">☁️ Sky</button>
+              <button class="theme-choice" data-theme="night">🌙 Night</button>
+            </div>
+          </div>
+          <div class="card setting-card">
+            <h2>🖥️ Desktop widget</h2>
+            <p class="muted">Keep the planner compact and calm.</p>
+            <label class="switch-row"><span>Compact mode</span><input id="compactToggle" type="checkbox"><i></i></label>
+            <label class="switch-row"><span>Start with Windows</span><input id="startupToggle" type="checkbox"><i></i></label>
+            <div class="info-box">Tip: use the system tray icon to keep DayBloom running while the window is hidden.</div>
+          </div>
+          <div class="card setting-card">
+            <h2>💾 Your data</h2>
+            <p class="muted">DayBloom stores your planner data locally on this PC.</p>
+            <button class="secondary" id="testNotify">Test notification</button>
+            <button class="danger" id="clearData">Reset all data</button>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="taskDialog">
+    <form method="dialog" id="taskForm" class="dialog-form">
+      <button type="button" class="dialog-close" data-close="taskDialog">×</button>
+      <h2>🌸 Add a task</h2>
+      <label>Task name<input id="taskTitle" required maxlength="120" placeholder="e.g. Finish ICT assignment"></label>
+      <label>Date<input id="taskDate" type="date" required></label>
+      <label>Reminder <span class="muted">(optional)</span><input id="taskReminder" type="datetime-local"></label>
+      <label>Priority
+        <select id="taskPriority"><option value="low">Low</option><option value="normal" selected>Normal</option><option value="high">High</option></select>
+      </label>
+      <div class="dialog-actions"><button type="button" class="secondary" data-close="taskDialog">Cancel</button><button class="primary">Save task</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="noteDialog">
+    <form method="dialog" id="noteForm" class="dialog-form">
+      <button type="button" class="dialog-close" data-close="noteDialog">×</button>
+      <h2>🗒️ Create a sticky note</h2>
+      <label>Title<input id="noteTitle" maxlength="50" placeholder="My note"></label>
+      <label>Note<textarea id="noteText" required maxlength="500" rows="6" placeholder="Write something..."></textarea></label>
+      <label>Color
+        <select id="noteColor"><option value="yellow">Sunny yellow</option><option value="pink">Soft pink</option><option value="purple">Lavender</option><option value="green">Mint</option><option value="blue">Sky blue</option></select>
+      </label>
+      <div class="dialog-actions"><button type="button" class="secondary" data-close="noteDialog">Cancel</button><button class="primary">Save note</button></div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
