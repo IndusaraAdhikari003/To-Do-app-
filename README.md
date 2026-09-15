@@ -3,7 +3,7 @@
 ### ✨ Plan Your Day. Organize Your Life. Bloom Every Day.
 
 <p align="center">
-  <img src="./assets/banner.png" alt="DayBloom Banner" width="900">
+  <img src="DayBloom_Windows_Portable/assets/banner.png" alt="DayBloom Banner" width="200">
 </p>
 
 <p align="center">
@@ -85,7 +85,10 @@ Instead of using multiple applications to manage your everyday activities, DayBl
 ### 🏠 Dashboard
 
 <p align="center">
-  <img src="./assets/dashboard.png" alt="DayBloom Dashboard" width="850">
+  <img src="DayBloom_Windows_Portable/assets/Dashboard1.png" alt="DayBloom Dashboard" width="850">
+</p>
+<p align="center">
+  <img src="DayBloom_Windows_Portable/assets/Dashboard2.png" alt="DayBloom Dashboard" width="850">
 </p>
 
 The dashboard provides a quick overview of your tasks, plans, reminders, and productivity.
@@ -95,7 +98,7 @@ The dashboard provides a quick overview of your tasks, plans, reminders, and pro
 ### 📅 Calendar
 
 <p align="center">
-  <img src="./assets/calendar.png" alt="DayBloom Calendar" width="850">
+  <img src="DayBloom_Windows_Portable/assets/calender.png" alt="DayBloom Calendar" width="850">
 </p>
 
 Plan your activities by selecting a specific date and adding your schedule.
@@ -105,7 +108,7 @@ Plan your activities by selecting a specific date and adding your schedule.
 ### ✅ Task Management
 
 <p align="center">
-  <img src="./assets/tasks.png" alt="DayBloom Tasks" width="850">
+  <img src="DayBloom_Windows_Portable/assets/tasks.png" alt="DayBloom Tasks" width="850">
 </p>
 
 Create, manage, and complete tasks from a simple productivity interface.
@@ -115,7 +118,7 @@ Create, manage, and complete tasks from a simple productivity interface.
 ### ⚙️ Settings & Customization
 
 <p align="center">
-  <img src="./assets/settings.png" alt="DayBloom Settings" width="850">
+  <img src="DayBloom_Windows_Portable/assets/settings.png" alt="DayBloom Settings" width="850">
 </p>
 
 Customize the application according to your personal preferences.
@@ -271,13 +274,15 @@ Future versions of DayBloom may include:
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="./assets/dashboard.png" width="400">
-  <img src="./assets/calendar.png" width="400">
+  <img src="<p align="center">
+  <img src="DayBloom_Windows_Portable/assets/Dashboard1.png" alt="DayBloom Dashboard" width="850">
+</p>" width="400">
+  <img src="DayBloom_Windows_Portable/assets/calender.png" width="400">
 </p>
 
 <p align="center">
-  <img src="./assets/tasks.png" width="400">
-  <img src="./assets/settings.png" width="400">
+  <img src="DayBloom_Windows_Portable/assets/tasks.png" width="400">
+  <img src="DayBloom_Windows_Portable/assets/settings.png" width="400">
 </p>
 
 ---
